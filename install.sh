@@ -38,6 +38,8 @@ cp arin.py ~/.recon-ng/modules/recon/hosts-netblocks
 mkdir -p ~/.recon-ng/modules/recon/domains-domains
 cp threatcrowd_domain.py ~/.recon-ng/modules/recon/domains-domains
 cp certstream_io.py ~/.recon-ng/modules/recon/domains-domains
+cp spyonweb_analytics.py ~/.recon-ng/modules/recon/domains-domains
+cp spyonweb_adsense.py ~/.recon-ng/modules/recon/domains-domains
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-ports
 cp censys_a.py ~/.recon-ng/modules/recon/hosts-ports
@@ -51,6 +53,7 @@ cp zoomeye_net.py ~/.recon-ng/modules/recon/netblocks-hosts
 for key in `echo "censysio_id
 censysio_secret
 emailhunter_key
+spyonweb_secret
 vibeapp_key
 vk_key
 zoomeye_key"`; do
