@@ -37,6 +37,7 @@ cp arin.py ~/.recon-ng/modules/recon/hosts-netblocks
 
 mkdir -p ~/.recon-ng/modules/recon/domains-domains
 cp threatcrowd_domain.py ~/.recon-ng/modules/recon/domains-domains
+cp certstream_io.py ~/.recon-ng/modules/recon/domains-domains
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-ports
 cp censys_a.py ~/.recon-ng/modules/recon/hosts-ports
