@@ -46,6 +46,7 @@ cp censys_a.py ~/.recon-ng/modules/recon/hosts-ports
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-hosts
 cp zoomeye_ip.py ~/.recon-ng/modules/recon/hosts-hosts
+cp ipinfo.py ~/.recon-ng/modules/recon/hosts-hosts
 
 mkdir -p ~/.recon-ng/modules/recon/netblocks-hosts
 cp zoomeye_net.py ~/.recon-ng/modules/recon/netblocks-hosts
@@ -53,6 +54,7 @@ cp zoomeye_net.py ~/.recon-ng/modules/recon/netblocks-hosts
 for key in `echo "censysio_id
 censysio_secret
 emailhunter_key
+ipinfo_api
 spyonweb_secret
 vibeapp_key
 vk_key
