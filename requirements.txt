@@ -1,3 +1,5 @@
 certstream
-dns
+dnspython
 dnsdumpster
+feedparser
+requests
