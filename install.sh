@@ -42,6 +42,9 @@ cp certstream_io.py ~/.recon-ng/modules/recon/domains-domains
 cp spyonweb_analytics.py ~/.recon-ng/modules/recon/domains-domains
 cp spyonweb_adsense.py ~/.recon-ng/modules/recon/domains-domains
 
+mkdir -p ~/.recon-ng/modules/recon/domains-vulnerabilities
+cp github_secrets.py ~/.recon-ng/modules/recon/domains-vulnerabilities/
+
 mkdir -p ~/.recon-ng/modules/recon/hosts-ports
 cp censys_a.py ~/.recon-ng/modules/recon/hosts-ports
 
