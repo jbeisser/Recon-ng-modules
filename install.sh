@@ -21,6 +21,7 @@ cp hacked_emails.py  ~/.recon-ng/modules/recon/contacts-credentials
 
 mkdir -p ~/.recon-ng/modules/recon/contacts-profiles
 cp vibeapp.py ~/.recon-ng/modules/recon/contacts-profiles
+cp migrate_contacts.py ~/.recon-ng/modules/recon/contacts-profiles
 
 mkdir -p ~/.recon-ng/modules/recon/domains-hosts
 cp baidu_site.py ~/.recon-ng/modules/recon/domains-hosts
