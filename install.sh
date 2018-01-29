@@ -42,6 +42,7 @@ cp threatcrowd_domain.py ~/.recon-ng/modules/recon/domains-domains
 cp certstream_io.py ~/.recon-ng/modules/recon/domains-domains
 cp spyonweb_analytics.py ~/.recon-ng/modules/recon/domains-domains
 cp spyonweb_adsense.py ~/.recon-ng/modules/recon/domains-domains
+cp nsec_walker.py ~/.recon-ng/modules/recon/domains-domains
 
 mkdir -p ~/.recon-ng/modules/recon/domains-vulnerabilities
 cp github_secrets.py ~/.recon-ng/modules/recon/domains-vulnerabilities/
