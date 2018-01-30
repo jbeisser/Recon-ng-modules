@@ -58,6 +58,9 @@ cp dnstrails.py ~/.recon-ng/modules/recon/hosts-hosts
 mkdir -p ~/.recon-ng/modules/recon/netblocks-hosts
 cp zoomeye_net.py ~/.recon-ng/modules/recon/netblocks-hosts
 
+mkdir -p ~/.recon-ng/modules/recon/profiles-repositories
+cp bitbucket_repos.py ~/.recon-ng/modules/recon/profiles-repositories
+
 for key in `echo "censysio_id
 censysio_secret
 emailhunter_key
