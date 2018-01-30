@@ -61,6 +61,9 @@ cp zoomeye_net.py ~/.recon-ng/modules/recon/netblocks-hosts
 mkdir -p ~/.recon-ng/modules/recon/profiles-repositories
 cp bitbucket_repos.py ~/.recon-ng/modules/recon/profiles-repositories
 
+mkdir -p ~/.recon-ng/modules/recon/profiles-contacts
+cp bitbucket_contacts.py ~/.recon-ng/modules/recon/profiles-contacts
+
 for key in `echo "censysio_id
 censysio_secret
 emailhunter_key
