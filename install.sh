@@ -64,6 +64,9 @@ cp bitbucket_repos.py ~/.recon-ng/modules/recon/profiles-repositories
 mkdir -p ~/.recon-ng/modules/recon/profiles-contacts
 cp bitbucket_contacts.py ~/.recon-ng/modules/recon/profiles-contacts
 
+mkdir -p ~/.recon-ng/modules/recon/profiles-profiles
+cp bitbucket_profile.py ~/.recon-ng/modules/recon/profiles-profiles
+
 for key in `echo "censysio_id
 censysio_secret
 emailhunter_key
