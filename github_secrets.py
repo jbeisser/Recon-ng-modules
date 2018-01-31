@@ -1,5 +1,7 @@
 from recon.core.module import BaseModule
 import os
+import time
+import urllib
 
 class Module(BaseModule):
     meta = {
@@ -7,7 +9,9 @@ class Module(BaseModule):
         'author': 'j nazario (@jnazario)',
         'description': 'Uses the Github API to search for possible vulnerabilites in source code by leveraging Github Dorks and the \'domains\' search operator. Updates the \'vulnerabilities\' table with the results.',
         'query': 'SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL',
-
+        'options': (
+           ('sleep', 60, False, 'Time to sleep between searches to avoid lockout'),
+        ),
     }
 
     # via https://www.hackerone.com/blog/how-to-recon-and-content-discovery
@@ -19,11 +23,13 @@ class Module(BaseModule):
                 query = '%s %s' % (domain, dork)
                 for result in self.search_github_api(query):
                     data = {
-                        'reference': query,
+                        'host': urllib.urlparse(result['html_url']).netloc,
+                        'reference': domain,
                         'example': result['html_url'],
-                        'category': 'Github Dork',
+                        'category': dork,
                     }
                     for key in sorted(data.keys()):
                         self.output('%s: %s' % (key.title(), data[key]))
+                    self.add_vulnerabilities(**data)
                     print(self.ruler*50)
-                    self.add_vulnerabilities(**data)    
+                time.sleep(self.options['sleep'])
