@@ -67,6 +67,10 @@ cp bitbucket_contacts.py ~/.recon-ng/modules/recon/profiles-contacts
 mkdir -p ~/.recon-ng/modules/recon/profiles-profiles
 cp bitbucket_profile.py ~/.recon-ng/modules/recon/profiles-profiles
 
+# probes are direct contact with the host to assess vulns
+mkdir -p ~/.recon-ng/modules/probe/hosts-vulnerabilities/
+cp tls_analyze.py  ~/.recon-ng/modules/probe/hosts-vulnerabilities/
+
 for key in `echo "censysio_id
 censysio_secret
 emailhunter_key
