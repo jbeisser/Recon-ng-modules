@@ -33,6 +33,7 @@ cp censys_mx.py ~/.recon-ng/modules/recon/domains-hosts
 cp zoomeye_hostname.py ~/.recon-ng/modules/recon/domains-hosts
 cp dnsdumpster-query.py ~/.recon-ng/modules/recon/domains-hosts
 cp crt_sh.py ~/.recon-ng/modules/recon/domains-hosts
+cp passivetotal_subdomains.py ~/.recon-ng/modules/recon/domains-hosts
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-netblocks
 cp arin.py ~/.recon-ng/modules/recon/hosts-netblocks
