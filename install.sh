@@ -11,6 +11,8 @@ mkdir -p ~/.recon-ng/modules/recon/domains-contacts
 cp vk_news.py ~/.recon-ng/modules/recon/domains-contacts
 cp email_format.py ~/.recon-ng/modules/recon/domains-contacts
 cp emailhunter.py ~/.recon-ng/modules/recon/domains-contacts
+cp bulkwhoisapi.py ~/.recon-ng/modules/recon/domains-contacts
+cp passivetotal_contacts.py ~.recon-ng/modules/recon/domains-contacts
 
 mkdir -p ~/.recon-ng/modules/recon/companies-hosts
 cp shodan_org.py ~/.recon-ng/modules/recon/companies-hosts
@@ -18,6 +20,9 @@ cp censys_org.py ~/.recon-ng/modules/recon/companies-hosts
 
 mkdir -p ~/.recon-ng/modules/recon/contacts-credentials
 cp hacked_emails.py  ~/.recon-ng/modules/recon/contacts-credentials
+
+mkdir -p ~/.recon-ng/modules/recon/contacts-domains
+cp passivetotal_domains.py ~/.recon-ng/modules/recon/contacts-domains
 
 mkdir -p ~/.recon-ng/modules/recon/contacts-profiles
 cp vibeapp.py ~/.recon-ng/modules/recon/contacts-profiles
@@ -35,6 +40,9 @@ cp dnsdumpster-query.py ~/.recon-ng/modules/recon/domains-hosts
 cp crt_sh.py ~/.recon-ng/modules/recon/domains-hosts
 cp passivetotal_subdomains.py ~/.recon-ng/modules/recon/domains-hosts
 
+mkdir -p ~/.recon-ng/modules/recon/hosts-companies
+cp otx_pulse_host.py ~/.recon-ng/modules/recon/hosts-companies
+
 mkdir -p ~/.recon-ng/modules/recon/hosts-netblocks
 cp arin.py ~/.recon-ng/modules/recon/hosts-netblocks
 
@@ -43,10 +51,14 @@ cp threatcrowd_domain.py ~/.recon-ng/modules/recon/domains-domains
 cp certstream_io.py ~/.recon-ng/modules/recon/domains-domains
 cp spyonweb_analytics.py ~/.recon-ng/modules/recon/domains-domains
 cp spyonweb_adsense.py ~/.recon-ng/modules/recon/domains-domains
+cp crt_sh.py ~/.recon-ng/modules/recon/domains-domains
 cp nsec_walker.py ~/.recon-ng/modules/recon/domains-domains
 
 mkdir -p ~/.recon-ng/modules/recon/domains-vulnerabilities
 cp github_secrets.py ~/.recon-ng/modules/recon/domains-vulnerabilities/
+
+mkdir -p ~/.recon-ng/modules/recon/hosts-domains
+cp otx_pulse_hostname.py ~/.recon-ng/modules/recon/hosts-domains
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-ports
 cp censys_a.py ~/.recon-ng/modules/recon/hosts-ports
@@ -55,6 +67,8 @@ mkdir -p ~/.recon-ng/modules/recon/hosts-hosts
 cp zoomeye_ip.py ~/.recon-ng/modules/recon/hosts-hosts
 cp ipinfo.py ~/.recon-ng/modules/recon/hosts-hosts
 cp dnstrails.py ~/.recon-ng/modules/recon/hosts-hosts
+cp otx_pulse_ip.py   ~/.recon-ng/modules/recon/hosts-hosts
+cp otx_pulse_pdns.py ~/.recon-ng/modules/recon/hosts-hosts
 
 mkdir -p ~/.recon-ng/modules/recon/netblocks-hosts
 cp zoomeye_net.py ~/.recon-ng/modules/recon/netblocks-hosts
@@ -72,7 +86,8 @@ cp bitbucket_profile.py ~/.recon-ng/modules/recon/profiles-profiles
 mkdir -p ~/.recon-ng/modules/probe/hosts-vulnerabilities/
 cp tls_analyze.py  ~/.recon-ng/modules/probe/hosts-vulnerabilities/
 
-for key in `echo "censysio_id
+for key in `echo "bulkwhoisapi_key
+censysio_id
 censysio_secret
 emailhunter_key
 ipinfo_api
