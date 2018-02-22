@@ -69,6 +69,7 @@ cp ipinfo.py ~/.recon-ng/modules/recon/hosts-hosts
 cp dnstrails.py ~/.recon-ng/modules/recon/hosts-hosts
 cp otx_pulse_ip.py   ~/.recon-ng/modules/recon/hosts-hosts
 cp otx_pulse_pdns.py ~/.recon-ng/modules/recon/hosts-hosts
+cp robtex.py ~/.recon-ng/modules/recon/hosts-hosts
 
 mkdir -p ~/.recon-ng/modules/recon/netblocks-hosts
 cp zoomeye_net.py ~/.recon-ng/modules/recon/netblocks-hosts
