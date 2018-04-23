@@ -59,6 +59,7 @@ cp github_secrets.py ~/.recon-ng/modules/recon/domains-vulnerabilities/
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-domains
 cp otx_pulse_hostname.py ~/.recon-ng/modules/recon/hosts-domains
+cp greynoise.py ~/.recon-ng/modules/recon/hosts-domains
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-ports
 cp censys_a.py ~/.recon-ng/modules/recon/hosts-ports
