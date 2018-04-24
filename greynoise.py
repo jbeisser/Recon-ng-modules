@@ -13,14 +13,14 @@ class Module(BaseModule):
     }
 
     def module_run(self, hosts):
+        domains = set()
         for ip_address in hosts:
             self.heading(ip_address, 1)
             resp = requests.post('http://api.greynoise.io:8888/v1/query/ip', data = {'ip':ip_address})
             if resp.json()['status'] == 'unknown' or resp.status_code != 200:
                 continue
-            domains = set()
             for r in resp.json()['records']:
-                if len(r['rdns_parent']) > 0:
-                    try: domains.add(r['rdns_parent'])
+                if len(r['metadata'].get('rdns_parent', '')) > 0:
+                    try: domains.add(r['metadata']['rdns_parent'])
                     except KeyError: pass
-            self.add_domains(domains)
+        for domain in domains: self.add_domains(domain)
