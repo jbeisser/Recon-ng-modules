@@ -18,6 +18,9 @@ class Module(BaseModule):
             resp = requests.post('http://api.greynoise.io:8888/v1/query/ip', data = {'ip':ip_address})
             if resp.json()['status'] == 'unknown' or resp.status_code != 200:
                 continue
-            try: domains = { x['rdns_parent'] for x in resp.json()['records'] if len(x['rdns_parent']) > 0 }
-            except KeyError: continue
+            domains = set()
+            for r in resp.json()['records']:
+                if len(r['rdns_parent']) > 0:
+                    try: domains.add(r['rdns_parent'])
+                    except KeyError: pass
             self.add_domains(domains)
