@@ -61,6 +61,9 @@ mkdir -p ~/.recon-ng/modules/recon/hosts-domains
 cp otx_pulse_hostname.py ~/.recon-ng/modules/recon/hosts-domains
 cp greynoise.py ~/.recon-ng/modules/recon/hosts-domains
 
+mkdir -p ~/.recon-ng/modules/recon/domains-ports
+cp fofa.py ~/.recon-ng/modules/recon/domains-ports
+
 mkdir -p ~/.recon-ng/modules/recon/hosts-ports
 cp censys_a.py ~/.recon-ng/modules/recon/hosts-ports
 
@@ -92,6 +95,8 @@ for key in `echo "bulkwhoisapi_key
 censysio_id
 censysio_secret
 emailhunter_key
+fofa_email
+fofa_key
 ipinfo_api
 spyonweb_secret
 vibeapp_key
