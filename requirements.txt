@@ -3,3 +3,4 @@ dnspython
 dnsdumpster
 feedparser
 requests
+sslyze
