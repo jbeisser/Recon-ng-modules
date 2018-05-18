@@ -66,6 +66,7 @@ cp fofa.py ~/.recon-ng/modules/recon/domains-ports
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-ports
 cp censys_a.py ~/.recon-ng/modules/recon/hosts-ports
+cp viewdns_ports.py ~/.recon-ng/modules/recon/hosts-ports
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-hosts
 cp zoomeye_ip.py ~/.recon-ng/modules/recon/hosts-hosts
@@ -100,6 +101,7 @@ fofa_key
 ipinfo_api
 spyonweb_secret
 vibeapp_key
+viewdns_key
 vk_key
 zoomeye_key"`; do
 	echo "INSERT INTO keys (name) VALUES (\"$key\");" | sqlite3 ~/.recon-ng/keys.db
