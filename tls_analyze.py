@@ -6,7 +6,8 @@ from sslyze.plugins.openssl_ccs_injection_plugin import OpenSslCcsInjectionScanC
 from sslyze.plugins.robot_plugin import RobotScanCommand, RobotScanResult, RobotScanResultEnum
 from sslyze.plugins.session_renegotiation_plugin import SessionRenegotiationScanCommand, SessionRenegotiationScanResult
 from sslyze.plugins.session_resumption_plugin import SessionResumptionSupportScanCommand
-from sslyze.server_connectivity import ServerConnectivityInfo, ServerConnectivityError
+from sslyze.server_connectivity_info import ServerConnectivityInfo
+from sslyze.server_connectivity_tester import ServerConnectivityError
 from sslyze.ssl_settings import TlsWrappedProtocolEnum
 
 from recon.core.module import BaseModule
