@@ -1,6 +1,12 @@
+BeautifulSoup
 certstream
+dicttoxml
 dnspython
 dnsdumpster
 feedparser
+lxml
+olefile
+PyPDF2
 requests
 sslyze
+xlsxwriter
