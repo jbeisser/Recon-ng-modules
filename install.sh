@@ -17,6 +17,7 @@ cp passivetotal_contacts.py ~/.recon-ng/modules/recon/domains-contacts
 mkdir -p ~/.recon-ng/modules/recon/companies-hosts
 cp shodan_org.py ~/.recon-ng/modules/recon/companies-hosts
 cp censys_org.py ~/.recon-ng/modules/recon/companies-hosts
+cp certdb.py ~/.recon-ng/modules/recon/companies-hosts
 
 mkdir -p ~/.recon-ng/modules/recon/contacts-credentials
 cp hacked_emails.py  ~/.recon-ng/modules/recon/contacts-credentials
@@ -39,6 +40,7 @@ cp zoomeye_hostname.py ~/.recon-ng/modules/recon/domains-hosts
 cp dnsdumpster-query.py ~/.recon-ng/modules/recon/domains-hosts
 cp crt_sh.py ~/.recon-ng/modules/recon/domains-hosts
 cp passivetotal_subdomains.py ~/.recon-ng/modules/recon/domains-hosts
+cp virustotal.py ~/.recon-ng/modules/recon/domains-hosts
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-companies
 cp otx_pulse_host.py ~/.recon-ng/modules/recon/hosts-companies
@@ -95,6 +97,7 @@ cp tls_analyze.py  ~/.recon-ng/modules/probe/hosts-vulnerabilities/
 for key in `echo "bulkwhoisapi_key
 censysio_id
 censysio_secret
+certdb_key
 emailhunter_key
 fofa_email
 fofa_key
