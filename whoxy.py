@@ -4,7 +4,7 @@ class Module(BaseModule):
     meta = {
         'name': 'WhoXY Domain Enumeration',
         'author': 'Jose Nazario',
-        'description': 'Uses WhoXY to update the \'domains\' tables.',
+        'description': 'Uses WhoXY to update the \'domains\' and \'company\' tables.',
         'comments': (
             'This module uses the WhoXY API to query by contact email ',
             'information to identify other domain names they have registered.'
@@ -18,6 +18,11 @@ class Module(BaseModule):
         url = 'http://api.whoxy.com/?key={0}&reverse=whois&email={1}'
         for email in emails:
             resp = self.request(url.format(api_key, email))
+            print url.format(api_key, email)
             if resp.status_code == 200:
                 for domain in resp.json['search_result']:
+                    # add people and addresses too
                     self.add_domains(domain['domain_name'])
+                    company = domain['techical_contact'].get('company_name', None)
+                    if company:
+                        self.add_companies(company=company)
