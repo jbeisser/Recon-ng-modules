@@ -24,6 +24,7 @@ cp hacked_emails.py  ~/.recon-ng/modules/recon/contacts-credentials
 
 mkdir -p ~/.recon-ng/modules/recon/contacts-domains
 cp passivetotal_domains.py ~/.recon-ng/modules/recon/contacts-domains
+cp whoxy.py ~/.recon-ng/modules/recon/contacts-domains
 
 mkdir -p ~/.recon-ng/modules/recon/contacts-profiles
 cp vibeapp.py ~/.recon-ng/modules/recon/contacts-profiles
@@ -106,6 +107,7 @@ spyonweb_secret
 vibeapp_key
 viewdns_key
 vk_key
+whoxy_key
 zoomeye_key"`; do
 	echo "INSERT INTO keys (name) VALUES (\"$key\");" | sqlite3 ~/.recon-ng/keys.db
 done
