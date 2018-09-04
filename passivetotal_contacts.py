@@ -27,7 +27,8 @@ class Module(BaseModule):
         if not data.has_key('results'):
             print data
         for result in data.get('results', []):
-            res.append(result['contactEmail'])
+            try: res.append(result['contactEmail'])
+            except KeyError: pass
         return res
 
     def module_run(self, domains):
