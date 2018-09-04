@@ -19,20 +19,23 @@ class Module(BaseModule):
     }
     
     # http://viewdns.info/api/docs/port-scanner.php
-    
+
     def module_run(self, hosts):
         key = self.get_key('viewdns_key')
-        baseurl = 'https://api.viewdns.info/portscan/'
+        base_url = 'https://api.viewdns.info/portscan/'
         for host in hosts:
+            self.heading(host, level=0)
             params = {'key': key,
                       'host': host,
                       'output': 'json'}
             params = urllib.urlencode(params)
-            url = "%s%s?%s" % (base_url, params)
+            url = "%s?%s" % (base_url, params)
             resp = self.request(url)
+            if resp.status_code != 200 or resp.json is None:
+                continue
             for info in resp.json['respose']['port']:
                 if info['status'] != 'open':
                     continue
-                self.add_ports(host=host, 
-                               port=info['number'], 
+                self.add_ports(host=host,
+                               port=info['number'],
                                protocol=info['service'].lower())
