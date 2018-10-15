@@ -69,6 +69,7 @@ cp fofa.py ~/.recon-ng/modules/recon/domains-ports
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-ports
 cp censys_a.py ~/.recon-ng/modules/recon/hosts-ports
+cp censys_ip.py ~/.recon-ng/modules/recon/hosts-ports
 cp viewdns_ports.py ~/.recon-ng/modules/recon/hosts-ports
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-hosts
