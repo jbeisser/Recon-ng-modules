@@ -13,6 +13,7 @@ cp email_format.py ~/.recon-ng/modules/recon/domains-contacts
 cp emailhunter.py ~/.recon-ng/modules/recon/domains-contacts
 cp bulkwhoisapi.py ~/.recon-ng/modules/recon/domains-contacts
 cp passivetotal_contacts.py ~/.recon-ng/modules/recon/domains-contacts
+cp dnssoa.py ~/.recon-ng/modules/recon/domains-contacts
 
 mkdir -p ~/.recon-ng/modules/recon/companies-hosts
 cp shodan_org.py ~/.recon-ng/modules/recon/companies-hosts
