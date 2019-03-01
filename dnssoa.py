@@ -6,7 +6,7 @@ class Module(BaseModule):
     meta = {
         'name': 'DNS SOA record enumerator',
         'author': 'Jose Nazario',
-        'description': 'Uses DNS SOA records to update the \'contats\' table.',
+        'description': 'Uses DNS SOA records to update the \'contacts\' table.',
         'query': 'SELECT DISTINCT domain FROM domains WHERE domain IS NOT NULL',
     }
 
