@@ -60,6 +60,7 @@ cp nsec_walker.py ~/.recon-ng/modules/recon/domains-domains
 
 mkdir -p ~/.recon-ng/modules/recon/domains-vulnerabilities
 cp github_secrets.py ~/.recon-ng/modules/recon/domains-vulnerabilities/
+cp grayhat.py ~/.recon-ng/modules/recon/domains-vulnerabilities/
 
 mkdir -p ~/.recon-ng/modules/recon/hosts-domains
 cp otx_pulse_hostname.py ~/.recon-ng/modules/recon/hosts-domains
@@ -105,6 +106,7 @@ certdb_key
 emailhunter_key
 fofa_email
 fofa_key
+grayhat_warfare
 ipinfo_api
 spyonweb_secret
 vibeapp_key
