@@ -6,6 +6,7 @@ dnsdumpster
 feedparser
 lxml
 olefile
+publicsuffix
 PyPDF2
 requests
 sslyze
