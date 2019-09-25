@@ -65,6 +65,7 @@ cp grayhat.py ~/.recon-ng/modules/recon/domains-vulnerabilities/
 mkdir -p ~/.recon-ng/modules/recon/hosts-domains
 cp otx_pulse_hostname.py ~/.recon-ng/modules/recon/hosts-domains
 cp greynoise.py ~/.recon-ng/modules/recon/hosts-domains
+cp psl_migrate.py ~/.recon-ng/modules/recon/hosts-domains
 
 mkdir -p ~/.recon-ng/modules/recon/domains-ports
 cp fofa.py ~/.recon-ng/modules/recon/domains-ports
