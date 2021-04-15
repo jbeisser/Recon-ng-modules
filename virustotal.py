@@ -17,4 +17,4 @@ class Module(BaseModule):
                 self.error('Error seen with domain: {0}'.format(domain))
                 continue
             for result in data.json['data']:
-                self.add_hosts(host=result['id'])
+                self.insert_hosts(host=result['id'])

@@ -1,6 +1,5 @@
 from recon.core.module import BaseModule
-#from recon.utils.parsers import parse_hostname
-from urlparse import urlparse
+from urllib.parse import urlparse
 import requests
 import re
 
@@ -40,4 +39,4 @@ class Module(BaseModule):
             for host in results:
                 if host.endswith('.'+domain) and host not in hosts:
                     hosts.append(host)
-                    self.add_hosts(host)
+                    self.insert_hosts(host)

@@ -1,5 +1,5 @@
 from recon.core.module import BaseModule
-from urlparse import urlparse
+from urllib.parse import urlparse
 import re
 # TODO CHECK
 
@@ -50,11 +50,11 @@ class Module(BaseModule):
                 try:  # Reallocated IP space
                     org = resp.json['ns4:pft']['customer']['name']['$']
                     handle = resp.json['ns4:pft']['customer']['handle']['$']
-                except KeyError, ke:
+                except KeyError as ke:
                     try:  # Direct allocation
                         org = resp.json['ns4:pft']['net']['orgRef']['@name']
                         handle = resp.json['ns4:pft']['net']['orgRef']['@handle']
-                    except KeyError, ke:
+                    except KeyError as ke:
                         self.output("Error querying %s" % ip)
                         continue
 

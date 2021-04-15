@@ -1,6 +1,6 @@
 from recon.core.module import BaseModule
 import requests
-from urlparse import urlparse
+from urllib.parse import urlparse
 import re
 
 class Module(BaseModule):
@@ -35,4 +35,4 @@ class Module(BaseModule):
             self.heading(email, level=0)
             results = self.get_passivetotal_whois(email, 'email')
             for domain in results:
-                self.add_domains(domain)
+                self.insert_domains(domain)

@@ -16,5 +16,5 @@ class Module(BaseModule):
             resp = self.request(url)
             jsonobj = resp.json
             for address in [x['address'] for x in jsonobj['passive_dns']]:
-                self.add_hosts(host, address)
+                self.insert_hosts(host, address)
                 self.output('\'%s\' successfully found.' % (address))

@@ -21,5 +21,5 @@ class Module(BaseModule):
             for x in jsonobj['data']:
                 if 'certificate subject' in x['key'] and '*.' in x['value']:
                     domain = x[u'value'].replace('*.', '')
-                    self.add_domains(domain)
-                    self.output('\'%s\' successfully found.' % (domain, ))
+                    self.insert_domains(domain)
+                    self.output('\'%s\' successfully found.' % (domain,))

@@ -1,6 +1,6 @@
 from recon.core.module import BaseModule
 import requests
-from urlparse import urlparse
+from urllib.parse import urlparse
 import re
 
 class Module(BaseModule):
@@ -25,7 +25,7 @@ class Module(BaseModule):
         data = response.json()
         res = []
         if not data.has_key('results'):
-            print data
+            print(data)
         for result in data.get('results', []):
             try: res.append(result['contactEmail'])
             except KeyError: pass
@@ -36,4 +36,4 @@ class Module(BaseModule):
             self.heading(domain, level=0)
             results = self.get_passivetotal_whois(domain, 'domain')
             for email in results:
-                self.add_contacts(email=email)
+                self.insert_contacts(email=email)

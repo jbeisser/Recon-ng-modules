@@ -21,5 +21,5 @@ class Module(BaseModule):
             for x in jsonobj['data']:
                 if x[u'name'].endswith('Certificate Subject'):
                     company = x[u'value']
-                    self.add_companies(company=company)
-                    self.output('\'%s\' successfully found.' % (company, ))
+                    self.insert_companies(company=company)
+                    self.output('\'%s\' successfully found.' % (company,))
