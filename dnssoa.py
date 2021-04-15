@@ -18,4 +18,4 @@ class Module(BaseModule):
                 continue
             for a in ans.rrset.items:
                 e = a.to_text().split()[1].replace('.', '@', 1).rstrip('.')
-                self.add_contacts(email=e)
+                self.insert_contacts(email=e)
